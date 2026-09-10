@@ -1,7 +1,7 @@
+use crate::Language;
 use serde::{Deserialize, Serialize};
 use std::fmt;
 use std::str::FromStr;
-use crate::Language;
 
 /// All 650 directional WikDict SQLite dictionaries in release 2_2026-06.
 ///
@@ -1316,8 +1316,12 @@ impl Dictionary {
             Self::ZhTr => (Language::Zh, Language::Tr),
         }
     }
-    pub const fn source(self) -> Language { self.languages().0 }
-    pub const fn target(self) -> Language { self.languages().1 }
+    pub const fn source(self) -> Language {
+        self.languages().0
+    }
+    pub const fn target(self) -> Language {
+        self.languages().1
+    }
     pub const fn pair(self) -> &'static str {
         match self {
             Self::BgCa => "bg-ca",
@@ -2626,11 +2630,15 @@ impl Dictionary {
             Self::ZhTr => "zh-tr.sqlite3",
         }
     }
-    pub const fn all() -> &'static [Self; 650] { &ALL_DICTIONARIES }
+    pub const fn all() -> &'static [Self; 650] {
+        &ALL_DICTIONARIES
+    }
 }
 
 impl fmt::Display for Dictionary {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result { f.write_str(self.pair()) }
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.write_str(self.pair())
+    }
 }
 
 impl FromStr for Dictionary {

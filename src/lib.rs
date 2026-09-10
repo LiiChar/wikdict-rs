@@ -3,7 +3,9 @@ mod downloader;
 mod language;
 mod pair;
 
-pub use database::{DatabaseError, SimpleTranslation, Translation, TranslationGrouped, WikDictDatabase};
+pub use database::{
+    DatabaseError, SimpleTranslation, Translation, TranslationGrouped, WikDictDatabase,
+};
 pub use downloader::{DownloadError, DownloadProgress, WikDictDownloader, WikDictVersion};
 pub use language::Language;
 pub use pair::{Dictionary, ALL_DICTIONARIES};

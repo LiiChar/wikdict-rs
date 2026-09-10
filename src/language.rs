@@ -33,7 +33,34 @@ pub enum Language {
 }
 
 impl Language {
-    pub const ALL: [Self; 26] = [Self::Bg, Self::Ca, Self::Cs, Self::Da, Self::De, Self::El, Self::En, Self::Es, Self::Fi, Self::Fr, Self::Ga, Self::Id, Self::It, Self::Ja, Self::Ku, Self::La, Self::Lt, Self::Mg, Self::Nl, Self::No, Self::Pl, Self::Pt, Self::Ru, Self::Sv, Self::Tr, Self::Zh];
+    pub const ALL: [Self; 26] = [
+        Self::Bg,
+        Self::Ca,
+        Self::Cs,
+        Self::Da,
+        Self::De,
+        Self::El,
+        Self::En,
+        Self::Es,
+        Self::Fi,
+        Self::Fr,
+        Self::Ga,
+        Self::Id,
+        Self::It,
+        Self::Ja,
+        Self::Ku,
+        Self::La,
+        Self::Lt,
+        Self::Mg,
+        Self::Nl,
+        Self::No,
+        Self::Pl,
+        Self::Pt,
+        Self::Ru,
+        Self::Sv,
+        Self::Tr,
+        Self::Zh,
+    ];
 
     pub const fn code(self) -> &'static str {
         match self {
@@ -68,7 +95,9 @@ impl Language {
 }
 
 impl fmt::Display for Language {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result { f.write_str(self.code()) }
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.write_str(self.code())
+    }
 }
 
 impl FromStr for Language {
