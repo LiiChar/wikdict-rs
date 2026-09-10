@@ -28,7 +28,7 @@ futures-util = "0.3"
 reqwest = {
     version = "0.13",
     default-features = false,
-    features = ["rustls-tls", "stream"]
+    features = ["stream"]
 }
 rusqlite = {
     version = "0.40",
