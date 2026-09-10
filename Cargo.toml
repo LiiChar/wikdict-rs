@@ -2,13 +2,44 @@
 name = "wikdict"
 version = "0.1.0"
 edition = "2021"
-description = "Rust client and SQLite reader for WikDict dictionaries"
+
+description = "Rust library for downloading and querying WikDict SQLite dictionaries"
+
 license = "MIT OR Apache-2.0"
+
+repository = "https://github.com/YOUR_USERNAME/wikdict-rs"
+
+readme = "README.md"
+
+keywords = [
+    "wikdict",
+    "dictionary",
+    "translation",
+    "sqlite",
+]
+
+categories = [
+    "localization",
+    "database",
+]
 
 [dependencies]
 futures-util = "0.3"
-reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "stream"] }
-rusqlite = { version = "0.32", features = ["bundled"] }
-serde = { version = "1", features = ["derive"] }
+reqwest = {
+    version = "0.12",
+    default-features = false,
+    features = ["rustls-tls", "stream"]
+}
+rusqlite = {
+    version = "0.32",
+    features = ["bundled"]
+}
+serde = {
+    version = "1",
+    features = ["derive"]
+}
 thiserror = "2"
-tokio = { version = "1", features = ["fs", "io-util"] }
+tokio = {
+    version = "1",
+    features = ["fs", "io-util"]
+}
